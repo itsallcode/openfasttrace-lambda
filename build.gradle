@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id "com.github.kaklakariada.aws-sam-deploy" version "0.5.0"
+}
+
+repositories {
+    jcenter()
+}
+
+version = '0.0.1'
+
+ext {
+    log4jVersion = '2.11.1'
+    deployStage = project.hasProperty('stage') ? project.properties['stage'] : 'test'
+}
+
+serverless {
+    activeStage = deployStage
+    defaultAwsProfile = project.properties['awsProfile']
+    defaultAwsRegion = project.properties['awsRegion']
+    defaultDeployBucket = project.properties['awsDeployBucket']
+    stages {
+        test {}
+        prod {}
+    }
+    api {
+        stackName = "${project.name}-${deployStage}"
+        samTemplate = file('template.yml')
+    }
+}
+
+dependencies {
+    runtime "com.amazonaws:aws-lambda-java-log4j2:1.1.0"
+    runtime "org.apache.logging.log4j:log4j-core:${log4jVersion}"
+    runtime "org.apache.logging.log4j:log4j-slf4j-impl:${log4jVersion}"
+}
