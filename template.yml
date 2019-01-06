@@ -52,12 +52,12 @@ Resources:
       MemorySize: 128
       CodeUri: ${CodeUri}
       Events:
-        GetRequest:
+        PostRequest:
           Type: Api
           Properties:
             RestApiId: !Ref ApiGatewayApi
-            Path: /echo
-            Method: GET
+            Path: /trace
+            Method: POST
 
 Outputs:
   ApiUrl:
