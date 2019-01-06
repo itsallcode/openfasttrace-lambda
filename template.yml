@@ -14,7 +14,12 @@ Resources:
         "MetricsEnabled": False,
         "DataTraceEnabled": False,
         "ResourcePath": "/*",
-        "HttpMethod": "*"
+        "HttpMethod": "*",
+        "ThrottlingBurstLimit": 2,
+        "ThrottlingRateLimit": 1,
+        "CachingEnabled": False,
+        "CacheTtlInSeconds": 300,
+        "CacheDataEncrypted": False
       }]
       EndpointConfiguration: REGIONAL
       Cors:
