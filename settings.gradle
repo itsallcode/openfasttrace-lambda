@@ -1,1 +1,3 @@
 rootProject.name = 'openfasttrace-lambda'
+
+includeBuild '../../aws/aws-lambda-request-handler'

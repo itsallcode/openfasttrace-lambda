@@ -9,6 +9,9 @@ repositories {
 
 version = '0.0.1'
 
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
 ext {
     log4jVersion = '2.11.1'
     deployStage = project.hasProperty('stage') ? project.properties['stage'] : 'test'
@@ -30,6 +33,7 @@ serverless {
 }
 
 dependencies {
+    compile 'com.github.kaklakariada:aws-lambda-request-handler:0.4.0'
     runtime "com.amazonaws:aws-lambda-java-log4j2:1.1.0"
     runtime "org.apache.logging.log4j:log4j-core:${log4jVersion}"
     runtime "org.apache.logging.log4j:log4j-slf4j-impl:${log4jVersion}"

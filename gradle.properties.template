@@ -1,0 +1,3 @@
+awsDeployBucket = <bucket>
+awsRegion = <region>
+awsProfile = <profile>
