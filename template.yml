@@ -53,8 +53,8 @@ Resources:
     Properties:
       Handler: org.itsallcode.openfasttrace.lambda.TraceLambda
       Runtime: java8
-      Timeout: 15
-      MemorySize: 128
+      Timeout: 30
+      MemorySize: 3008 # 128
       CodeUri: ${CodeUri}
       Events:
         PostRequest:

@@ -11,7 +11,7 @@
         <Root level="info">
             <AppenderRef ref="Lambda" />
         </Root>
-        <Logger name="com.github.kaklakariada.aws.lambda" level="trace" />
-        <Logger name="org.itsallcode.openfasttrace.lambda" level="trace" />
+        <Logger name="com.github.kaklakariada.aws.lambda" level="debug" />
+        <Logger name="org.itsallcode.openfasttrace.lambda" level="debug" />
     </Loggers>
 </Configuration>
