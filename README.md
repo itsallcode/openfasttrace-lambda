@@ -1,6 +1,8 @@
 # openfasttrace-lambda
 OpenFastTrace as a service using AWS Lambda and API Gateway
 
+# ⚠️ This project is deprecated and not maintained any more. ⚠️
+
 ## Development
 
 ### Deploy
